@@ -15,4 +15,4 @@ Interview
 •	Wat moet een manager kunnen zien in een overzicht?
 •	Welke functies moeten leden in hun eigen account hebben?
 •	Wat zou de nieuwe website volgens jullie vooral moeten verbeteren?
-Hier komen de antwoordne
+Hier komen de antwoorden🍑💦🍆
