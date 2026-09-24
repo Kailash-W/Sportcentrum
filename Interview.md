@@ -1,1 +1,31 @@
 Hier komt de interview vragen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hier komen de antwoordne
