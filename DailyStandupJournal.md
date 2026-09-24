@@ -6,7 +6,7 @@
 
 ### 9/24/26
 
-[Info]: Vandaag was de begin van ons PRA opdracht. En dus was er **niet echt per se** "Begin Daily Standup".
+Info: Vandaag was de begin van ons PRA opdracht. En dus was er **niet echt per se** "Begin Daily Standup".
 
 Teun 
   - Gaf input
