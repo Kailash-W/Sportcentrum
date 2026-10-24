@@ -2,31 +2,58 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Database\Factories\UserFactory;
-use Illuminate\Database\Eloquent\Attributes\Fillable;
-use Illuminate\Database\Eloquent\Attributes\Hidden;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Storage;
 
-#[Fillable(['name', 'email', 'password'])]
-#[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable
 {
-    /** @use HasFactory<UserFactory> */
-    use HasFactory, Notifiable;
+    use Notifiable;
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
+    public const ADMIN = 'admin';
+    public const PARTICIPANT = 'participant';
+    public const TRAINER = 'trainer';
+
+    protected $fillable = ['name', 'email', 'password', 'role', 'photo'];
+
+    protected $hidden = ['password', 'remember_token'];
+
     protected function casts(): array
     {
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function participant(): HasOne
+    {
+        return $this->hasOne(Participant::class, 'user_id');
+    }
+
+    public function trainer(): HasOne
+    {
+        return $this->hasOne(Trainer::class, 'user_id');
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->role === self::ADMIN;
+    }
+
+    /** Waar de gebruiker na het inloggen naartoe gaat (eigen scherm per rol). */
+    public function homeUrl(): string
+    {
+        return match ($this->role) {
+            self::ADMIN => route('admin.dashboard'),
+            self::TRAINER => route('trainer.dashboard'),
+            default => route('participant.dashboard'),
+        };
+    }
+
+    public function photoUrl(): ?string
+    {
+        return $this->photo ? Storage::disk('public')->url($this->photo) : null;
     }
 }
