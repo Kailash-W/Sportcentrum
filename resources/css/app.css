@@ -1,9 +1,127 @@
-@import 'tailwindcss';
+* { box-sizing: border-box; }
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #222222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---------- Header (blauw) ---------- */
+.site-header {
+    background: #1e5bb8;
+    color: #ffffff;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    gap: 16px;
+}
+
+.site-name {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.site-header nav { display: flex; align-items: center; gap: 12px; }
+.welkom { font-size: 0.95rem; }
+.inline-form { margin: 0; }
+
+/* ---------- Knoppen ---------- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-light { background: #ffffff; color: #1e5bb8; }
+.btn-light:hover { background: #e6eefb; }
+
+.btn-blue { background: #1e5bb8; color: #ffffff; width: 100%; margin-top: 16px; }
+.btn-blue:hover { background: #164a98; }
+
+/* ---------- Pagina (wit) ---------- */
+.site-main {
+    flex: 1;
+    background: #ffffff;
+    padding: 40px 0;
+}
+
+.hero { text-align: center; padding: 60px 0; }
+.hero h1 { font-size: 2.5rem; color: #1e5bb8; margin: 0; }
+
+/* ---------- Inlogformulier ---------- */
+.login-box {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+.login-box h1 { margin-top: 0; color: #1e5bb8; }
+.hint { color: #666666; margin-top: -8px; }
+
+.login-box label { display: block; margin: 14px 0 6px; font-weight: bold; }
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbbbbb;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.login-box .checkbox { font-weight: normal; }
+.error { color: #c0392b; font-size: 0.9rem; margin: 6px 0 0; }
+
+/* ---------- Footer (zwart) ---------- */
+.site-footer {
+    background: #000000;
+    color: #ffffff;
+    padding-top: 30px;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.footer-inner h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.footer-inner p { margin: 0; line-height: 1.6; color: #cccccc; }
+
+.footer-bottom {
+    margin-top: 24px;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999999;
+    border-top: 1px solid #333333;
+}
+
+@media (max-width: 600px) {
+    .site-name { font-size: 1.15rem; }
+    .welkom { display: none; }
 }
