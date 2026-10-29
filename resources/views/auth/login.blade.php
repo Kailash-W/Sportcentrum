@@ -20,7 +20,6 @@
             </div>
             <button type="submit" class="btn full">Inloggen</button>
         </form>
-        <p style="text-align:center"><a href="{{ route('password.request') }}">Wachtwoord vergeten?</a></p>
         <hr>
         <p style="text-align:center">Nog geen account?</p>
         <a class="btn o full" href="{{ route('register') }}">Registreren</a>
