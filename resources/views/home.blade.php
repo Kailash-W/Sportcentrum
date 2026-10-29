@@ -2,8 +2,7 @@
 
 @section('content')
     @php
-        // Zet een foto neer als public/images/hero.jpg en hij verschijnt automatisch in de hero.
-        $hero = file_exists(public_path('images/hero.jpg')) ? asset('images/hero.jpg') : null;
+        $hero = file_exists(public_path('//public/images/hero.jpg')) ? asset('//public/images/hero.jpg') : null;
     @endphp
 
     <div class="hero" @if ($hero) style="background-image:url('{{ $hero }}')" @endif>
@@ -32,7 +31,7 @@
         <div class="grid g3">
             @foreach ($activities as $activity)
                 <div class="card">
-                    <div class="photo">📷</div>
+                    <div class="photo">🏊🏻‍♂️🧘🏻‍♂️🏋🏻‍♂️</div>
                     <h3 style="margin-top:8px">{{ $activity->name }}</h3>
                     <p style="margin:0">{{ $activity->description }}</p>
                     @if ($activity->date)
