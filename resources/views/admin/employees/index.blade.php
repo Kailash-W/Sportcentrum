@@ -18,7 +18,7 @@
                         <td>{{ $employee->position }}</td>
                         <td>{{ $employee->lessons_count }}</td>
                         <td>
-                            <a class="btn s o" href="{{ route('admin.employees.edit', $employee) }}">Wijzig / koppel</a>
+                            <a class="btn s o" href="{{ route('admin.employees.edit', $employee) }}">Wijzig en koppel</a>
                             <form class="inline" method="POST" action="{{ route('admin.employees.destroy', $employee) }}" onsubmit="return confirm('Deze medewerker verwijderen?')">
                                 @csrf @method('DELETE')
                                 <button type="submit" class="btn s r">Verwijder</button>
