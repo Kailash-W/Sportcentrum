@@ -5,14 +5,6 @@
 @section('content')
     <h1>Hallo, {{ $user->name }}</h1>
 
-    <div class="grid g2">
-        <div class="card blue">
-            <h3>Persoonlijke gegevens</h3>
-            <p>{{ $participant->name }} · {{ $participant->address ?: 'Adres onbekend' }}<br>
-               {{ $participant->phone ?: 'Telefoon onbekend' }} · {{ $user->email }}</p>
-            <p><a class="btn s o" href="{{ route('profile.edit') }}">Account wijzigen</a></p>
-        </div>
-
         <div class="card blue">
             <h3>Komende lessen</h3>
             @forelse ($upcoming as $lesson)

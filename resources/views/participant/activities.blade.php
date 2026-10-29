@@ -11,7 +11,7 @@
         <div class="grid g3">
             @foreach ($activities as $activity)
                 <div class="card">
-                    <div class="photo">📷</div>
+                    <div class="photo">🏊🏻‍♂️🧘🏻‍♂️🏋🏻‍♂️</div>
                     <h3 style="margin-top:8px">{{ $activity->name }}</h3>
                     <p>{{ $activity->description }}</p>
                     @if ($activity->date)
