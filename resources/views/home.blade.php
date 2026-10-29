@@ -42,37 +42,8 @@
         </div>
     @endif
 
-    <h2 class="section">Populaire lessen</h2>
-    @if ($popularLessons->isEmpty())
-        <p class="empty">Er zijn op dit moment geen lessen gepland.</p>
-    @else
-        <div class="grid g3">
-            @foreach ($popularLessons as $lesson)
-                <div class="card blue">
-                    <h3>{{ $lesson->name }}</h3>
-                    {{ $lesson->date->format('d-m-Y') }} · {{ $lesson->start_label }}<br>
-                    <small>{{ $lesson->trainer->name }}</small>
-                </div>
-            @endforeach
-        </div>
-    @endif
-
-    <h2 class="section">Ons team</h2>
-    <div class="grid g2">
-        @foreach ($trainers as $trainer)
-            <div class="biz">
-                @include('partials.avatar', ['name' => $trainer->name, 'photo' => $trainer->user?->photoUrl()])
-                <div><b>{{ $trainer->name }}</b><small>Trainer</small></div>
-            </div>
-        @endforeach
-        @foreach ($employees as $employee)
-            <div class="biz">
-                @include('partials.avatar', ['name' => $employee->name, 'photo' => null])
-                <div><b>{{ $employee->name }}</b><small>{{ $employee->position }}</small></div>
-            </div>
-        @endforeach
-    </div>
-
+    <div class="contact-container">
     <h2 class="section" id="contact">Contact</h2>
     <p>info@delinde.nl · 012-3456789 · Lindelaan 1, Breda</p>
+    </div>
 @endsection
