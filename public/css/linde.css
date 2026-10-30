@@ -49,6 +49,7 @@ main{flex:1;width:100%;max-width:1100px;margin:0 auto;padding:20px}
 .stat{font:italic 800 2.4rem 'Barlow Condensed',sans-serif;color:var(--b);line-height:1}
 .section{margin-top:26px;}
 .contact-container {display: flex;flex-direction: column;align-items: center; text-align: center;}
+.profilefix{max-width: 500px; margin: 40px auto; padding: 0 20px;}
 
 
 /* Knoppen */
@@ -59,6 +60,7 @@ main{flex:1;width:100%;max-width:1100px;margin:0 auto;padding:20px}
 .btn.full{display:block;width:100%}
 .btn.disabled{opacity:.5;cursor:not-allowed}
 form.inline{display:inline;margin:0}
+
 
 /* Formulieren */
 .f{margin-bottom:14px}
