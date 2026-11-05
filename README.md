@@ -1,58 +1,51 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏋️‍♂️ Sportcentrum De Linde - Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Welkom bij de officiële GitHub-repository van het webproject voor **Sportcentrum De Linde**. Dit project is ontwikkeld als onderdeel van de PRA-opdracht en is inmiddels succesvol en definitief opgeleverd. 
 
-## About Laravel
+De applicatie is gebouwd met het **Laravel**-framework en maakt gebruik van een **MySQL (phpMyAdmin)** database om een sportieve, overzichtelijke en functionele website te bieden voor zowel leden als beheerders.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📂 Projectdocumentatie & Eisen (`/Docs`)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Alle formele documenten, functionele eisen en visuele ontwerpen die tijdens dit project zijn opgesteld, zijn netjes gecategoriseerd en terug te vinden in de **`Docs`**-folder van deze repository. 
 
-## Learning Laravel
+In deze map vind je onder andere:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+*   **Plan van Eisen (PvE):** De getekende klantversie (`Plan_van_Eisen_klantversie_v3.docx`) waarin alle functionele en niet-functionele eisen, randvoorwaarden en de scope van het project helder zijn vastgelegd.
+*   **Wireframes (Ontwerpen):** De volledige evolutie van het website-ontwerp, inclusief de interactieve HTML-bestand (`wireframe-de-linde-rework.html`). Deze ontwerpen weerspiegelen de sportieve uitstraling en de feedback van de klant. (Download het .html bestand apart om het wireframe te zien.)
+*   **Entity Relationship Diagram (ERD):** Het database-ontwerp dat de structuur, tabellen en relaties binnen phpMyAdmin visueel in kaart brengt. (Het ERD zit in ons plannen van eisen bij "Datamodel")
+*   **Acceptatiecriteria (Testfase):** Het volledige document dat specifiek ingaat op het testen van onze website, waarin is vastgelegd hoe de applicatie voldoet aan de gestelde kwaliteitseisen.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+*Navigeer naar de map `/Docs` bovenin de bestandsstructuur om deze bestanden direct te bekijken of te downloaden.*
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+(Voor het doc file download het apart.)
 
-## Agentic Development
+---
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## ✨ Belangrijkste Functionaliteiten
 
-```bash
-composer require laravel/boost --dev
+Op basis van de klanteisen in het PvE bevat de website de volgende kernfunctionaliteiten:
+*   **Sportieve Homepage:** Een aantrekkelijk visitekaartje voor het sportcentrum dat direct de juiste sfeer overbrengt.
+*   **Gebruikersregistratie & Inlogsysteem:** Een veilig portaal waar leden kunnen inloggen (inclusief het door de klant aangevraagde telefoonnummer-veld bij registratie).
+*   **Leden Dashboard:** Een gepersonaliseerde omgeving voor leden, volledig opgebouwd volgens de goedgekeurde wireframes.
+*   **Profielbeheer:** Een dedicated profielpagina waar gebruikers hun gegevens kunnen inzien en beheren.
+*   **Beheerderspaneel (Admin):** Functionaliteiten voor het beheer van de website en de gekoppelde database.
 
-php artisan boost:install
-```
+---
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## 🛠️ Technische Stack
 
-## Contributing
+*   **Framework:** Laravel 13+
+*   **Database:** MySQL / phpMyAdmin
+*   **Front-end:** HTML5, CSS3 (Styling conform wireframes), JavaScript
+*   **Dependency Management:** Composer & NPM
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 👥 Het Team (Inazuma Eleven)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Dit project is met trots gerealiseerd door:
+*   **Teun** (Database & Back-end functionaliteiten, Ledensectie)
+*   **Shiwan** (Klantcontact, Dashboard & Front-end logica)
+*   **Kailash** (Repository beheer, UI/CSS-styling, Inlog- & Homescreen visuals en Documentatie PvE)
