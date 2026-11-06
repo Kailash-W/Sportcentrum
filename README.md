@@ -37,9 +37,99 @@ Op basis van de klanteisen in het PvE bevat de website de volgende kernfunctiona
 ## 🛠️ Technische Stack
 
 *   **Framework:** Laravel 13+
+*   **Taal (back-end):** PHP 8.3 of hoger
 *   **Database:** MySQL / phpMyAdmin
 *   **Front-end:** HTML5, CSS3 (Styling conform wireframes), JavaScript
 *   **Dependency Management:** Composer & NPM
+*   **Versiebeheer & Downloaden:** Git & GitHub (via `git clone` of als ZIP-bestand, zie hieronder)
+
+---
+
+## ⬇️ Het project downloaden en starten
+
+### 1. Vereisten
+
+Zorg dat het volgende op je computer staat:
+
+*   **PHP 8.3 of hoger**
+*   **Composer**
+*   **MySQL met phpMyAdmin** (bijvoorbeeld via XAMPP)
+*   **Git** (alleen nodig als je het project via `git clone` downloadt)
+*   **Node.js & NPM** (optioneel, alleen nodig voor `npm install`)
+
+### 2. Het project downloaden
+
+Kies één van de twee manieren:
+
+**Optie A: via Git (aanbevolen)**
+
+```bash
+git clone https://github.com/Kailash-W/Sportcentrum.git
+cd Sportcentrum
+```
+
+**Optie B: als ZIP-bestand**
+
+1. Ga naar de hoofdpagina van deze repository op GitHub.
+2. Klik op de groene knop **`<> Code`**.
+3. Klik op **`Download ZIP`**.
+4. Pak het ZIP-bestand uit en open de map in je terminal of code-editor.
+
+### 3. Het project installeren
+
+Voer de volgende stappen uit in de projectmap:
+
+```bash
+# 1. Installeer de PHP-pakketten
+composer install
+
+# 2. Maak je eigen .env-bestand
+cp .env.example .env
+#    (Windows: copy .env.example .env)
+
+# 3. Genereer de applicatiesleutel
+php artisan key:generate
+```
+
+### 4. De database instellen
+
+1. Start **Apache** en **MySQL** (bijvoorbeeld in het XAMPP Control Panel).
+2. Open **phpMyAdmin** en maak een lege database aan met de naam `sportcentrum`.
+3. Open het bestand `.env` en pas de database-instellingen aan:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sportcentrum
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+4. Maak de tabellen aan en vul ze met testgegevens:
+
+```bash
+php artisan migrate --seed
+```
+
+### 5. De website starten
+
+```bash
+php artisan serve
+```
+
+Open daarna **http://localhost:8000** in je browser.
+
+*Optioneel:* wil je ook de NPM-pakketten installeren, voer dan `npm install` uit.
+
+### 🔑 Testaccount
+
+Na `php artisan migrate --seed` kun je inloggen als beheerder met:
+
+*   **E-mailadres:** `admin@delinde.nl`
+*   **Wachtwoord:** `password`
+
+*Let op: dit zijn alleen testgegevens voor lokaal gebruik.*
 
 ---
 
