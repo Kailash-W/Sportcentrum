@@ -82,5 +82,29 @@
         });
     })();
 </script>
+<script>
+    // Nederlandse meldingen bij het controleren van formulieren in de browser
+    (function () {
+        function melding(el) {
+            var v = el.validity;
+            if (v.valueMissing) return el.tagName === 'SELECT' ? 'Kies een optie uit de lijst.' : (el.type === 'checkbox' ? 'Vink dit vakje aan om verder te gaan.' : 'Vul dit veld in.');
+            if (v.typeMismatch) return el.type === 'email' ? 'Vul een geldig e-mailadres in.' : 'Vul een geldige waarde in.';
+            if (v.tooShort) return 'Gebruik minimaal ' + el.minLength + ' tekens.';
+            if (v.tooLong) return 'Gebruik maximaal ' + el.maxLength + ' tekens.';
+            if (v.rangeUnderflow) return 'De waarde moet minimaal ' + el.min + ' zijn.';
+            if (v.rangeOverflow) return 'De waarde mag maximaal ' + el.max + ' zijn.';
+            if (v.stepMismatch) return 'Vul een geldige waarde in.';
+            if (v.patternMismatch) return 'Vul de waarde in het juiste formaat in.';
+            if (v.badInput) return 'Vul een geldige waarde in.';
+            return '';
+        }
+        document.addEventListener('invalid', function (e) {
+            e.target.setCustomValidity('');
+            e.target.setCustomValidity(melding(e.target));
+        }, true);
+        document.addEventListener('input', function (e) { e.target.setCustomValidity(''); }, true);
+        document.addEventListener('change', function (e) { e.target.setCustomValidity(''); }, true);
+    })();
+</script>
 </body>
 </html>
